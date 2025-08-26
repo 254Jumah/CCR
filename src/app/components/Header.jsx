@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 
 const Header = () => {
@@ -154,12 +154,12 @@ const Header = () => {
               Contact
             </button>
 
-            <Button
+            <button
               onClick={() => scrollToSection("get-involved")}
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white"
+              className="btn bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0"
             >
               Get Involved
-            </Button>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -261,12 +261,12 @@ const Header = () => {
               >
                 Contact
               </button>
-              <Button
+              <button
                 onClick={() => scrollToSection("get-involved")}
-                className="mt-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white w-full"
+                className="btn mt-4 w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0"
               >
                 Get Involved
-              </Button>
+              </button>
             </div>
           </div>
         )}

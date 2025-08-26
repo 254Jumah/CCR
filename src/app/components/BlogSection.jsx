@@ -12,7 +12,6 @@ import {
   Filter,
 } from "lucide-react";
 
-import { Card } from "@/components/ui/card";
 import Header from "./Header";
 
 const BlogPage = () => {
@@ -320,14 +319,13 @@ Our peer leaders are living proof that healing is possible and that those who ha
       <div className="min-h-screen bg-gray-50">
         <Header />
         <div className="container mx-auto px-4 py-8">
-          <Button
+          <button
             onClick={() => setSelectedPost(null)}
-            variant="outline"
-            className="mb-8 hover:bg-blue-50 border-blue-200"
+            className="btn btn-outline mb-8 border-blue-200 hover:bg-blue-50"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
-          </Button>
+          </button>
 
           <article className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -378,9 +376,9 @@ Our peer leaders are living proof that healing is possible and that those who ha
                       <MessageCircle className="w-5 h-5" />
                       <span>{selectedPostData.comments}</span>
                     </div>
-                    <Button variant="ghost" size="sm">
+                    <button className="btn btn-ghost btn-sm">
                       <Share2 className="w-5 h-5" />
-                    </Button>
+                    </button>
                   </div>
                 </div>
 
@@ -502,27 +500,26 @@ Our peer leaders are living proof that healing is possible and that those who ha
         {/* Category Filter */}
         <div className="flex flex-wrap gap-3 mb-12">
           {categories.map((category) => (
-            <Button
+            <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              variant={selectedCategory === category ? "default" : "outline"}
-              className={`${
+              className={`btn transition-all duration-300 ${
                 selectedCategory === category
-                  ? "bg-gradient-to-r from-blue-600 to-blue-800 text-white"
-                  : "hover:bg-blue-50 border-blue-200"
-              } transition-all duration-300`}
+                  ? "bg-gradient-to-r from-blue-600 to-blue-800 text-white border-0"
+                  : "btn-outline hover:bg-blue-50 border-blue-200"
+              }`}
             >
               {category}
-            </Button>
+            </button>
           ))}
         </div>
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredPosts.map((post) => (
-            <Card
+            <div
               key={post.id}
-              className="bg-white overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100"
               onClick={() => setSelectedPost(post.id)}
             >
               <div className="relative overflow-hidden">
@@ -573,16 +570,12 @@ Our peer leaders are living proof that healing is possible and that those who ha
                       <span>{post.comments}</span>
                     </div>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-blue-600 hover:text-blue-700"
-                  >
+                  <button className="btn btn-ghost btn-sm text-blue-600 hover:text-blue-700">
                     <Share2 className="w-4 h-4" />
-                  </Button>
+                  </button>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
@@ -598,15 +591,15 @@ Our peer leaders are living proof that healing is possible and that those who ha
             <p className="text-gray-600 mb-6">
               Try adjusting your search terms or category filter.
             </p>
-            <Button
+            <button
               onClick={() => {
                 setSearchTerm("");
                 setSelectedCategory("All");
               }}
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white"
+              className="btn bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0"
             >
               Clear Filters
-            </Button>
+            </button>
           </div>
         )}
 
@@ -623,9 +616,9 @@ Our peer leaders are living proof that healing is possible and that those who ha
               Have a story of healing or hope to share? We'd love to feature it
               on our blog.
             </p>
-            <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white">
+            <button className="btn bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0">
               Submit Story
-            </Button>
+            </button>
           </div>
         </div>
       </div>

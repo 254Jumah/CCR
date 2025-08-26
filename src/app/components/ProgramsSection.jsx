@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Search, Users, Heart, Shield, Home } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 const ProgramsSection = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);

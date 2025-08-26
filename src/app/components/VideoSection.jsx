@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Play, Film, Users, BookOpen, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 const VideoSection = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);

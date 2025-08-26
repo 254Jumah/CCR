@@ -12,7 +12,6 @@ import {
   Users,
   Star,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const programs = [
@@ -54,25 +53,17 @@ const Footer = () => {
             thrive. Your support makes a difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white text-blue-600 hover:bg-gray-100 border-white"
-            >
+            <button className="btn btn-lg btn-outline bg-white text-blue-600 hover:bg-gray-100 border-white">
               Volunteer With Us
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30"
-            >
+            </button>
+
+            <button className="btn btn-lg bg-white/20 hover:bg-white/30 text-white border border-white/30">
               Make a Donation
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30"
-            >
+            </button>
+
+            <button className="btn btn-lg bg-white/20 hover:bg-white/30 text-white border border-white/30">
               Partner With Us
-            </Button>
+            </button>
           </div>
         </div>
       </section>
@@ -143,9 +134,9 @@ const Footer = () => {
                     className="w-32 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8">
+                <button className="btn bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8 border-0">
                   Donate Now
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -159,12 +150,9 @@ const Footer = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   Make an immediate impact with a single donation
                 </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-200 hover:bg-blue-50"
-                >
+                <button className="btn btn-outline w-full border-blue-200 hover:bg-blue-50">
                   Give Once
-                </Button>
+                </button>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-md text-center">
@@ -175,12 +163,9 @@ const Footer = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   Provide sustained support for ongoing programs
                 </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-200 hover:bg-blue-50"
-                >
+                <button className="btn btn-outline w-full border-blue-200 hover:bg-blue-50">
                   Give Monthly
-                </Button>
+                </button>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-md text-center">
@@ -193,12 +178,9 @@ const Footer = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   Partner with us for larger community impact
                 </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-200 hover:bg-blue-50"
-                >
+                <button className="btn btn-outline w-full border-blue-200 hover:bg-blue-50">
                   Learn More
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -275,9 +257,9 @@ const Footer = () => {
                   rows={4}
                   className="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-400 focus:outline-none text-white placeholder-gray-400 resize-none"
                 ></textarea>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900">
+                <button className="btn w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0">
                   Send Message
-                </Button>
+                </button>
               </form>
             </div>
           </div>
