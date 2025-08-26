@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ArrowRight, Heart, Users, Target } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -46,22 +45,20 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
+              <button
                 onClick={() => scrollToSection("who-we-are")}
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="btn btn-lg bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white shadow-lg hover:shadow-xl transition-all duration-300 border-0"
               >
                 Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
+              </button>
+
+              <button
                 onClick={() => scrollToSection("get-involved")}
-                variant="outline"
-                size="lg"
-                className="border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300"
+                className="btn btn-outline btn-lg border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300"
               >
                 Get Involved
-              </Button>
+              </button>
             </div>
 
             {/* Stats */}

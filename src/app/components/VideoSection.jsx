@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Play, Film, Users, BookOpen, Heart } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 
 const VideoSection = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -211,17 +210,15 @@ const VideoSection = () => {
                 Stay updated with the latest stories, educational content, and
                 community highlights from CareConnect Rise.
               </p>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 border-white"
+              <button
                 onClick={() =>
                   window.open("https://youtube.com/@careconnectrise", "_blank")
                 }
+                className="btn btn-outline btn-lg bg-white text-blue-600 hover:bg-gray-100 border-white"
               >
                 <Film className="mr-2 h-5 w-5" />
                 Subscribe Now
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -242,13 +239,9 @@ const VideoSection = () => {
                 ></iframe>
               </div>
               <div className="p-4">
-                <Button
-                  onClick={closeVideo}
-                  variant="outline"
-                  className="w-full"
-                >
+                <button onClick={closeVideo} className="btn btn-outline w-full">
                   Close Video
-                </Button>
+                </button>
               </div>
             </div>
           </div>

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Search, Users, Heart, Shield, Home } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 
 const ProgramsSection = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -135,15 +134,14 @@ const ProgramsSection = () => {
                         <p className="text-lg opacity-90">{program.subtitle}</p>
                       </div>
                     </div>
-                    <Button
+                    <button
                       onClick={() =>
                         setSelectedProgram(isExpanded ? null : index)
                       }
-                      variant="outline"
-                      className="border-white/30 text-black hover:bg-green-900"
+                      className="btn btn-outline border-white/30 text-black hover:bg-green-900"
                     >
                       {isExpanded ? "Show Less" : "Learn More"}
-                    </Button>
+                    </button>
                   </div>
                 </div>
 
