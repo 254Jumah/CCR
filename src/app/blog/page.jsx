@@ -12,7 +12,6 @@ import {
   Filter,
 } from "lucide-react";
 
-import { Card } from "@/components/ui/Card";
 import Header from "../components/Header";
 
 const BlogPage = () => {
@@ -322,8 +321,7 @@ Our peer leaders are living proof that healing is possible and that those who ha
         <div className="container mx-auto px-4 py-8">
           <button
             onClick={() => setSelectedPost(null)}
-            variant="outline"
-            className="mb-8 hover:bg-blue-50 border-blue-200"
+            className="flex items-center px-4 py-2 mb-8 text-blue-600 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors duration-200"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
@@ -378,7 +376,7 @@ Our peer leaders are living proof that healing is possible and that those who ha
                       <MessageCircle className="w-5 h-5" />
                       <span>{selectedPostData.comments}</span>
                     </div>
-                    <button variant="ghost" size="sm">
+                    <button className="p-1 rounded-md hover:bg-gray-100 transition-colors">
                       <Share2 className="w-5 h-5" />
                     </button>
                   </div>
@@ -505,12 +503,11 @@ Our peer leaders are living proof that healing is possible and that those who ha
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              variant={selectedCategory === category ? "default" : "outline"}
-              className={`${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? "bg-gradient-to-r from-blue-600 to-blue-800 text-white"
-                  : "hover:bg-blue-50 border-blue-200"
-              } transition-all duration-300`}
+                  ? "bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-md"
+                  : "bg-white text-gray-700 border border-blue-200 hover:bg-blue-50"
+              }`}
             >
               {category}
             </button>
@@ -520,9 +517,9 @@ Our peer leaders are living proof that healing is possible and that those who ha
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredPosts.map((post) => (
-            <Card
+            <div
               key={post.id}
-              className="bg-white overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100"
               onClick={() => setSelectedPost(post.id)}
             >
               <div className="relative overflow-hidden">
@@ -573,16 +570,12 @@ Our peer leaders are living proof that healing is possible and that those who ha
                       <span>{post.comments}</span>
                     </div>
                   </div>
-                  <button
-                    variant="ghost"
-                    size="sm"
-                    className="text-blue-600 hover:text-blue-700"
-                  >
+                  <button className="p-1 rounded-md text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-colors">
                     <Share2 className="w-4 h-4" />
                   </button>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
@@ -603,7 +596,7 @@ Our peer leaders are living proof that healing is possible and that those who ha
                 setSearchTerm("");
                 setSelectedCategory("All");
               }}
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg font-medium transition-all duration-300"
             >
               Clear Filters
             </button>
@@ -612,7 +605,7 @@ Our peer leaders are living proof that healing is possible and that those who ha
 
         {/* Submit Story CTA */}
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border inline-block">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 inline-block">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Plus className="w-8 h-8 text-white" />
             </div>
@@ -623,7 +616,7 @@ Our peer leaders are living proof that healing is possible and that those who ha
               Have a story of healing or hope to share? We'd love to feature it
               on our blog.
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white">
+            <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-lg font-medium transition-all duration-300">
               Submit Story
             </button>
           </div>

@@ -156,7 +156,10 @@ const Header = () => {
 
             <button
               onClick={() => scrollToSection("get-involved")}
-              className="btn bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white border-0"
+              className="btn w-full bg-gradient-to-r from-blue-600 to-blue-800 
+             hover:from-blue-700 hover:to-blue-900 text-white 
+             border-0 rounded-lg shadow-md hover:shadow-lg 
+             transition-all duration-300 ease-in-out"
             >
               Get Involved
             </button>
