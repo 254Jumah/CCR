@@ -363,7 +363,9 @@ const Footer = () => {
             <div className="flex items-center space-x-2 text-gray-400">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
-              <span>for mental health and community healing</span>
+              <span>
+                for mental health and community healing by Emmat Solutions
+              </span>
             </div>
           </div>
         </div>
