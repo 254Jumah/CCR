@@ -16,7 +16,7 @@ import {
 const Footer = () => {
   const programs = [
     { name: "Research & Data", href: "#research" },
-    { name: "A Man Must Cry", href: "#man-must-cry" },
+    { name: "Beyond Mascuinity", href: "#man-must-cry" },
     { name: "He Stands for Her Dignity", href: "#dignity" },
     { name: "Substance Use Awareness", href: "#substance" },
     { name: "Caregivers Haven", href: "#caregivers" },
